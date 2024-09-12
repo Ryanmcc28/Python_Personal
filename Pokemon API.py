@@ -1,5 +1,4 @@
 import requests
-
 api_url = "https://pokeapi.co/api/v2/"
 
 def get_pokemon(name):
@@ -13,10 +12,8 @@ def get_pokemon(name):
     else:
         print("Failed to print data")
 
-
-pokemon_name = "428"
+pokemon_name = "40"
 pokeinfo = get_pokemon(pokemon_name)
 
 if  pokeinfo:
     print(f"{pokeinfo["name"]}")
-
