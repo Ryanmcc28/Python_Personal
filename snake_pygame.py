@@ -97,9 +97,9 @@ clock = pyg.time.Clock()
 main_game = MAIN()
 
 SCREEN_UPDATE = pyg.USEREVENT
-pyg.time.set_timer(SCREEN_UPDATE,150)
+pyg.time.set_timer(SCREEN_UPDATE,130)
 
-previous_input = "w"
+previous_input = ""
 
 counter = 0
 
@@ -118,16 +118,17 @@ while True:
       if item.type == pyg.KEYDOWN:
          if item.key == pyg.K_w and previous_input != "s":
             previous_input = "w"
-            main_game.snake.direction = Vector2(0,-1)
+            main_game.snake.direction = Vector2(0,-1)            
          elif item.key == pyg.K_s and previous_input != "w":
             previous_input = "s"
-            main_game.snake.direction = Vector2(0,1)
+            main_game.snake.direction = Vector2(0,1)           
          elif item.key == pyg.K_d and previous_input != "a":
             previous_input = "d"
-            main_game.snake.direction = Vector2(1,0) 
+            main_game.snake.direction = Vector2(1,0)             
          elif item.key == pyg.K_a and previous_input != "d":
             previous_input = "a"
             main_game.snake.direction = Vector2(-1,0)
+            
 
   screen.fill((255,215,235))
   main_game.draw_elements()
