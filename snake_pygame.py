@@ -73,8 +73,13 @@ class MAIN:
    def check_fail(self):
       if  self.snake.body[0].x < 0 or self.snake.body[0].x >= (cell_num) or self.snake.body[0].y < 0 or self.snake.body[0].y >= (cell_num):
           pyg.quit()
-          sys.exit()   
-         
+          sys.exit()  
+
+      for index in range(len(self.snake.body) - 1):
+        if self.snake.body[0].x == self.snake.body[index + 1].x and self.snake.body[0].y == self.snake.body[index + 1].y:
+         pyg.quit()
+         sys.exit()
+                 
 
   
         
@@ -112,18 +117,18 @@ while True:
 
       if item.type == pyg.KEYDOWN:
          if item.key == pyg.K_w and previous_input != "s":
-            main_game.snake.direction = Vector2(0,-1)
             previous_input = "w"
+            main_game.snake.direction = Vector2(0,-1)
          elif item.key == pyg.K_s and previous_input != "w":
-            main_game.snake.direction = Vector2(0,1)
             previous_input = "s"
+            main_game.snake.direction = Vector2(0,1)
          elif item.key == pyg.K_d and previous_input != "a":
-            main_game.snake.direction = Vector2(1,0)
             previous_input = "d"
+            main_game.snake.direction = Vector2(1,0) 
          elif item.key == pyg.K_a and previous_input != "d":
-            main_game.snake.direction = Vector2(-1,0)
             previous_input = "a"
-   
+            main_game.snake.direction = Vector2(-1,0)
+
   screen.fill((255,215,235))
   main_game.draw_elements()
   pyg.display.update()
