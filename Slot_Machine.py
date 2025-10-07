@@ -58,7 +58,7 @@ button = ttk.Button(master = bframe, text = 'Press to Roll', command = SPIN)
 
 frame.grid(row = 0, column = 0 , pady = 100, padx = 200)
 bframe.grid(row = 1, column = 0)
-
+ 
 
 slot1.pack(side = 'left', padx = 5)
 slot2.pack(side = 'left', padx = 5)

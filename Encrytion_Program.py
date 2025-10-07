@@ -3,6 +3,7 @@ import ttkbootstrap as ttk
 import random
 import string
 
+#basic python encrypion program to learn tKinter
 baseString = string.ascii_letters + string.punctuation + string.digits + ' '
 
 keyList = list(baseString)

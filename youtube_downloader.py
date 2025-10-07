@@ -4,7 +4,7 @@ import pytubefix.streams
 import moviepy
 
 
-subs = pytube.Channel("https://www.youtube.com/c/markiplier/*")
+subs = pytube.Channel("enter URL")
 
 print(subs.channel_id)
 

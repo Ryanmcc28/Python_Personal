@@ -2,7 +2,7 @@ import pygame as pyg
 from pygame.math import Vector2
 import sys
 import random
-
+#Online snake game course to learn python
 pyg.init()
 
 class SNAKE:
@@ -30,10 +30,6 @@ class SNAKE:
 
    def add_block(self):
       self.new_block = True
-     
-      
-         
-
 
 class FRUIT:
    def __init__(self):

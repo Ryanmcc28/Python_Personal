@@ -1,4 +1,5 @@
 import requests
+#Basic pokemon api experiment
 api_url = "https://pokeapi.co/api/v2/"
 
 def get_pokemon(name):
@@ -12,7 +13,8 @@ def get_pokemon(name):
     else:
         print("Failed to print data")
 
-pokemon_name = "40"
+#Enter pokemon name to get ID through api
+pokemon_name = ""
 pokeinfo = get_pokemon(pokemon_name)
 
 if  pokeinfo:

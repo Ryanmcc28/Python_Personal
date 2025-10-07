@@ -1,6 +1,6 @@
 import random
 import string
-
+#Basic brute-force password cracker
 
 # 6 digit password cracker
 
@@ -17,7 +17,7 @@ while count != password:
 
 #3 letter password cracker
 
-password = "pugs"
+password = "mayo"
 guess = ""
 count = 0
 char_range = string.ascii_letters.lower()
